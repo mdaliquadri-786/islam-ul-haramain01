@@ -3,8 +3,9 @@
 /**
  * @file LanguageSwitcher.tsx
  * @package @islamic/web
- * @description Accessible language selector component supporting English, Arabic, and Urdu.
- * Milestone: M3.4 — Web MVP UI Integration & Internationalization
+ * @description Apple-inspired segmented language selector with tactile transitions,
+ *              supporting English, Arabic, and Urdu with authentic native typography.
+ * Milestone: M3.4 / Web UI Renaissance
  */
 
 import { usePathname, useRouter } from 'next/navigation';
@@ -43,10 +44,13 @@ export function LanguageSwitcher({ currentLocale, compact = false }: LanguageSwi
       style={{
         display: 'inline-flex',
         alignItems: 'center',
-        backgroundColor: '#f1f5f9',
-        padding: '0.2rem',
-        borderRadius: '0.5rem',
-        border: '1px solid #e2e8f0',
+        backgroundColor: 'rgba(241, 245, 249, 0.85)',
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)',
+        padding: '0.25rem',
+        borderRadius: '9999px',
+        border: '1px solid rgba(226, 232, 240, 0.9)',
+        boxShadow: 'inset 0 1px 2px rgba(0, 0, 0, 0.04)',
         gap: '0.2rem'
       }}
     >
@@ -61,16 +65,23 @@ export function LanguageSwitcher({ currentLocale, compact = false }: LanguageSwi
             aria-pressed={isSelected}
             aria-label={`Switch to ${info.name} (${info.nativeName})`}
             style={{
-              padding: compact ? '0.25rem 0.5rem' : '0.35rem 0.75rem',
-              fontSize: compact ? '0.75rem' : '0.85rem',
+              padding: compact ? '0.25rem 0.65rem' : '0.35rem 0.85rem',
+              fontSize: compact ? '0.775rem' : '0.85rem',
               fontWeight: isSelected ? 700 : 500,
               color: isSelected ? '#ffffff' : '#475569',
-              backgroundColor: isSelected ? '#047857' : 'transparent',
-              border: 'none',
-              borderRadius: '0.375rem',
+              background: isSelected
+                ? 'linear-gradient(135deg, #059669 0%, #047857 100%)'
+                : 'transparent',
+              border: isSelected
+                ? '1px solid rgba(255, 255, 255, 0.2)'
+                : '1px solid transparent',
+              borderRadius: '9999px',
               cursor: 'pointer',
-              transition: 'all 0.15s ease-in-out',
-              fontFamily: info.fontFamily
+              boxShadow: isSelected ? '0 2px 5px rgba(4, 120, 87, 0.25)' : 'none',
+              transform: isSelected ? 'scale(1.02)' : 'none',
+              transition: 'all 0.18s cubic-bezier(0.4, 0, 0.2, 1)',
+              fontFamily: info.fontFamily,
+              userSelect: 'none'
             }}
           >
             {info.nativeName}

@@ -12,6 +12,8 @@ import { notFound } from 'next/navigation';
 import { isSupportedLocale, getDirection, type Locale, SUPPORTED_LOCALES } from '@islamic/ui';
 import { NavigationHeader } from '@/components/NavigationHeader';
 import { NavigationFooter } from '@/components/NavigationFooter';
+import { MobileBottomNav } from '@/components/MobileBottomNav';
+import { ToastProvider } from '@/components/Toast';
 
 export async function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
@@ -89,9 +91,12 @@ export default async function LocaleLayout({
         <JsonLd data={[createWebSiteSchema(typedLocale), createOrganizationSchema()]} />
       </head>
       <body>
-        <NavigationHeader locale={typedLocale} />
-        <main>{children}</main>
-        <NavigationFooter locale={typedLocale} />
+        <ToastProvider>
+          <NavigationHeader locale={typedLocale} />
+          <main style={{ minHeight: 'calc(100vh - 180px)' }}>{children}</main>
+          <NavigationFooter locale={typedLocale} />
+          <MobileBottomNav locale={typedLocale} />
+        </ToastProvider>
       </body>
     </html>
   );

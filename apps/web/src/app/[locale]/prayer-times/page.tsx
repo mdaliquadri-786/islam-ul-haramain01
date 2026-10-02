@@ -22,6 +22,7 @@ import type {
   PrayerTimesResult
 } from '@/lib/prayer';
 import { getDictionary, isSupportedLocale, DEFAULT_LOCALE, type Locale } from '@islamic/ui';
+import { CompassIcon, MosqueIcon } from '@/components/Icons';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -136,8 +137,9 @@ export default function LocalizedPrayerTimesPage({ params }: PageProps) {
         <p style={{ margin: 0, color: '#4b5563', fontSize: '1rem' }}>
           Deterministic, sub-millisecond astronomical calculations with multiple recognized Sunni authorities.
         </p>
-        <div style={{ marginTop: '0.75rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.35rem 0.75rem', backgroundColor: '#ecfdf5', border: '1px solid #a7f3d0', borderRadius: '0.375rem', fontSize: '0.9rem', color: '#065f46', fontWeight: 600 }}>
-          📍 {cityName} ({latitude.toFixed(4)}°, {longitude.toFixed(4)}°) — {timezone}
+        <div style={{ marginTop: '0.75rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.35rem 0.85rem', backgroundColor: '#ecfdf5', border: '1px solid #a7f3d0', borderRadius: '9999px', fontSize: '0.85rem', color: '#065f46', fontWeight: 600 }}>
+          <MosqueIcon size={16} />
+          <span>{cityName} ({latitude.toFixed(4)}°, {longitude.toFixed(4)}°) — {timezone}</span>
         </div>
       </header>
 
@@ -154,15 +156,16 @@ export default function LocalizedPrayerTimesPage({ params }: PageProps) {
                 key={c.id}
                 type="button"
                 onClick={() => handleSelectCity(c)}
+                className="btn"
                 style={{
                   padding: '0.45rem 0.85rem',
                   fontSize: '0.85rem',
                   fontWeight: isSelected ? 700 : 500,
-                  backgroundColor: isSelected ? '#059669' : '#f3f4f6',
-                  color: isSelected ? '#ffffff' : '#374151',
-                  border: isSelected ? '1px solid #047857' : '1px solid #d1d5db',
-                  borderRadius: '0.375rem',
-                  cursor: 'pointer'
+                  background: isSelected ? 'linear-gradient(135deg, #059669 0%, #047857 100%)' : '#f8fafc',
+                  color: isSelected ? '#ffffff' : '#334155',
+                  border: isSelected ? '1px solid #047857' : '1px solid #cbd5e1',
+                  borderRadius: '9999px',
+                  boxShadow: isSelected ? '0 2px 6px rgba(4, 120, 87, 0.25)' : 'none'
                 }}
               >
                 {c.name}
@@ -172,6 +175,7 @@ export default function LocalizedPrayerTimesPage({ params }: PageProps) {
           <button
             type="button"
             onClick={handleUseLocation}
+            className="btn btn-secondary"
             style={{
               padding: '0.45rem 0.85rem',
               fontSize: '0.85rem',
@@ -179,11 +183,12 @@ export default function LocalizedPrayerTimesPage({ params }: PageProps) {
               backgroundColor: '#eff6ff',
               color: '#1d4ed8',
               border: '1px solid #bfdbfe',
-              borderRadius: '0.375rem',
-              cursor: 'pointer'
+              borderRadius: '9999px',
+              gap: '0.35rem'
             }}
           >
-            🎯 Use My Location
+            <CompassIcon size={16} />
+            <span>Use My Location</span>
           </button>
         </div>
         {geoStatus && (
@@ -309,34 +314,43 @@ export default function LocalizedPrayerTimesPage({ params }: PageProps) {
           {/* Qibla Direction & Devotional Milestones Card */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {/* Qibla Card */}
-            <div style={{ backgroundColor: '#ffffff', border: '1px solid #e5e7eb', borderRadius: '0.75rem', padding: '1.5rem', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
-              <h3 style={{ fontSize: '1.15rem', fontWeight: 700, margin: '0 0 1rem 0', color: '#111827', borderBottom: '1px solid #f3f4f6', paddingBottom: '0.5rem' }}>
-                🧭 {dict.prayer.qiblaBearing}
+            <div className="card-editorial" style={{ backgroundColor: '#ffffff' }}>
+              <h3 style={{ fontSize: '1.15rem', fontWeight: 700, margin: '0 0 1rem 0', color: '#111827', borderBottom: '1px solid #f3f4f6', paddingBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+                <CompassIcon size={18} style={{ color: '#059669' }} />
+                <span>{dict.prayer.qiblaBearing}</span>
               </h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                 <div
                   style={{
-                    width: '80px',
-                    height: '80px',
+                    width: '84px',
+                    height: '84px',
                     borderRadius: '50%',
-                    border: '3px solid #059669',
+                    border: '2px solid rgba(16, 185, 129, 0.4)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     backgroundColor: '#ecfdf5',
-                    position: 'relative'
+                    position: 'relative',
+                    boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.05), 0 0 12px rgba(16, 185, 129, 0.15)'
                   }}
                 >
-                  <div
+                  {/* Subtle North Indicator */}
+                  <span style={{ position: 'absolute', top: '4px', fontSize: '0.65rem', fontWeight: 800, color: '#047857' }}>N</span>
+                  {/* Precise Nautical Needle */}
+                  <svg
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
                     style={{
                       transform: `rotate(${result.qibla.directionDegrees}deg)`,
-                      fontSize: '1.75rem',
-                      lineHeight: 1,
-                      transition: 'transform 0.5s ease-in-out'
+                      transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+                      filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))'
                     }}
                   >
-                    ⬆️
-                  </div>
+                    <polygon points="12,2 15,12 12,9.5 9,12" fill="#047857" />
+                    <polygon points="12,22 15,12 12,9.5 9,12" fill="#94a3b8" />
+                  </svg>
                 </div>
                 <div>
                   <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#065f46', fontFamily: 'monospace' }}>

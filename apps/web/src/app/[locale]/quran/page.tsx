@@ -11,6 +11,7 @@ import type { Metadata } from 'next';
 import { getAllSurahs } from '@/lib/quran';
 import { getDictionary, isSupportedLocale, type Locale } from '@islamic/ui';
 import { buildQuranIndexMetadata, JsonLd, createBreadcrumbSchema } from '@/lib/seo';
+import { ShieldCheckIcon, QuranIcon } from '@/components/Icons';
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -47,94 +48,94 @@ export default async function QuranIndexPage({ params }: PageProps) {
       <header style={{ marginBottom: '2.5rem', borderBottom: '1px solid #e5e7eb', paddingBottom: '1.5rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div>
-            <h1 style={{ fontSize: '1.875rem', fontWeight: 800, margin: '0 0 0.5rem 0', color: '#111827' }}>
-              {dict.quran.title}
-            </h1>
-            <p style={{ margin: 0, color: '#4b5563', fontSize: '1.05rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>
+              <QuranIcon size={26} style={{ color: '#059669' }} />
+              <h1 style={{ fontSize: '2rem', fontWeight: 900, margin: 0, color: '#064e3b', letterSpacing: '-0.02em' }}>
+                {dict.quran.title}
+              </h1>
+            </div>
+            <p style={{ margin: 0, color: '#475569', fontSize: '1.05rem' }}>
               {dict.quran.subtitle}
             </p>
           </div>
           <div style={{ textAlign: 'right' }}>
             <span
+              className="glass-pill"
               style={{
-                display: 'inline-block',
-                backgroundColor: '#ecfdf5',
+                backgroundColor: 'rgba(236, 253, 245, 0.9)',
                 color: '#065f46',
-                fontSize: '0.875rem',
-                fontWeight: 600,
-                padding: '0.35rem 0.85rem',
-                borderRadius: '9999px',
-                border: '1px solid #a7f3d0'
+                border: '1px solid rgba(167, 243, 208, 0.9)',
+                padding: '0.4rem 0.95rem'
               }}
             >
-              ✓ {dict.quran.verificationBadge} (114 {dict.quran.surah}, 6,236 {dict.quran.ayah})
+              <ShieldCheckIcon size={16} style={{ color: '#059669' }} />
+              <span>{dict.quran.verificationBadge} (114 {dict.quran.surah}, 6,236 {dict.quran.ayah})</span>
             </span>
           </div>
         </div>
       </header>
 
-      <section style={{ marginBottom: '2rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1rem' }}>
+      <section style={{ marginBottom: '2.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem' }}>
           {surahs.map((surah) => (
             <Link
               key={surah.id}
               href={`/${typedLocale}/quran/${surah.id}`}
+              className="card-editorial"
               style={{
-                display: 'block',
-                padding: '1.25rem',
                 backgroundColor: '#ffffff',
-                border: '1px solid #e2e8f0',
-                borderRadius: '0.75rem',
-                textDecoration: 'none',
-                color: 'inherit',
-                transition: 'border-color 0.2s, box-shadow 0.2s',
-                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.04)'
+                padding: '1.25rem',
+                border: '1px solid #e2e8f0'
               }}
             >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.65rem' }}>
                 <span
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    width: '2.2rem',
-                    height: '2.2rem',
-                    backgroundColor: '#f1f5f9',
-                    borderRadius: '0.375rem',
+                    width: '2.3rem',
+                    height: '2.3rem',
+                    backgroundColor: 'rgba(236, 253, 245, 0.8)',
+                    border: '1px solid rgba(167, 243, 208, 0.7)',
+                    borderRadius: '0.625rem',
                     fontSize: '0.85rem',
                     fontWeight: 700,
-                    color: '#334155'
+                    color: '#065f46'
                   }}
                 >
                   {surah.id}
                 </span>
                 <span
                   style={{
-                    fontSize: '1.45rem',
+                    fontSize: '1.6rem',
                     fontWeight: 700,
                     fontFamily: "Amiri, 'Traditional Arabic', serif",
-                    color: '#065f46'
+                    color: '#047857',
+                    lineHeight: 1
                   }}
                 >
                   {surah.nameArabic}
                 </span>
               </div>
               <div>
-                <div style={{ fontWeight: 700, color: '#111827', fontSize: '1rem' }}>{surah.nameTransliteration}</div>
+                <div style={{ fontWeight: 800, color: '#0f172a', fontSize: '1.05rem', letterSpacing: '-0.01em' }}>
+                  {surah.nameTransliteration}
+                </div>
                 <div style={{ fontSize: '0.85rem', color: '#64748b' }}>{surah.nameEnglish}</div>
               </div>
               <div
                 style={{
                   display: 'flex',
                   justifyContent: 'space-between',
-                  marginTop: '0.75rem',
-                  fontSize: '0.75rem',
-                  color: '#94a3b8',
+                  marginTop: '0.85rem',
+                  fontSize: '0.775rem',
+                  color: '#64748b',
                   borderTop: '1px solid #f1f5f9',
-                  paddingTop: '0.5rem'
+                  paddingTop: '0.6rem'
                 }}
               >
-                <span>
+                <span style={{ fontWeight: 600, color: surah.revelationType === 'meccan' ? '#b45309' : '#047857' }}>
                   {surah.revelationType === 'meccan' ? dict.quran.revelationMakkah : dict.quran.revelationMadinah}
                 </span>
                 <span>{surah.ayahsCount} {dict.quran.ayah}</span>

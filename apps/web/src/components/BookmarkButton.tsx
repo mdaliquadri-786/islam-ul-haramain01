@@ -10,6 +10,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import type { BookmarkContentType } from '@islamic/islamic-engine';
+import { useToast } from './Toast';
 
 interface BookmarkButtonProps {
   contentType: BookmarkContentType;
@@ -28,6 +29,7 @@ export function BookmarkButton({
   compact = false,
   label
 }: BookmarkButtonProps) {
+  const toast = useToast();
   const [isSaved, setIsSaved] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [toggling, setToggling] = useState<boolean>(false);
@@ -65,6 +67,10 @@ export function BookmarkButton({
 
     // Optimistic UI update
     setIsSaved(targetSaved);
+    toast?.showToast(
+      targetSaved ? 'Saved to Personal Library' : 'Removed from Personal Library',
+      'success'
+    );
 
     try {
       if (targetSaved) {

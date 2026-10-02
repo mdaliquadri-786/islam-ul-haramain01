@@ -1,48 +1,95 @@
 /* ==========================================================================
    ISLAM UL HARAMAIN (إسلام الحرمين) — Global Styles & Typography
-   Milestone: M3.4 — Web MVP UI Integration & Internationalization
+   Milestone: M3.4 / Web UI Renaissance — High-End Sanctuary Design System
    ========================================================================== */
 
 /* 1. Google Web Fonts with font-display: swap for optimal performance */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
 
-/* 2. Theme Primitives & Palette Tokens (from @islamic/ui) */
+/* 2. Theme Primitives & Palette Tokens (from @islamic/ui & Luxury Tokens) */
 :root {
-  /* Emerald Palette */
+  /* Emerald Palette — Sanctuary Green */
   --color-emerald-50: #ecfdf5;
   --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
   --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
   --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
   --color-emerald-900: #064e3b;
   --color-emerald-950: #022c22;
 
-  /* Gold Palette */
+  /* Gold & Amber Palette — Sacred Illumination */
   --color-gold-50: #fffbeb;
   --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
   --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
   --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
   --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
 
-  /* Parchment Palette */
+  /* Parchment & Cream Palette */
   --color-parchment-light: #faf8f5;
   --color-parchment-sepia: #f4ecd8;
+  --color-parchment-subtle: #fcfbf9;
   --color-parchment-dark: #1c1b18;
 
-  /* Slate Neutrals */
+  /* Midnight & Slate Neutrals */
   --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
   --color-slate-200: #e2e8f0;
   --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
   --color-slate-600: #475569;
+  --color-slate-700: #334155;
   --color-slate-800: #1e293b;
   --color-slate-900: #0f172a;
   --color-slate-950: #020617;
+
+  /* Apple-Style Glass Tokens */
+  --glass-bg-header: rgba(255, 255, 255, 0.88);
+  --glass-bg-card: rgba(255, 255, 255, 0.92);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.65);
+  --glass-bg-dock: rgba(15, 23, 42, 0.85);
+  --glass-border-light: rgba(226, 232, 240, 0.8);
+  --glass-border-subtle: rgba(0, 0, 0, 0.05);
+  --glass-border-highlight: rgba(255, 255, 255, 0.6);
+  --glass-blur-sm: 8px;
+  --glass-blur-md: 16px;
+  --glass-blur-lg: 24px;
+
+  /* Luxury Gradients */
+  --grad-hero: radial-gradient(100% 70% at 50% 0%, rgba(16, 185, 129, 0.12) 0%, rgba(254, 243, 199, 0.08) 50%, rgba(255, 255, 255, 0) 100%);
+  --grad-emerald: linear-gradient(135deg, #065f46 0%, #047857 50%, #022c22 100%);
+  --grad-gold: linear-gradient(135deg, #d97706 0%, #b45309 50%, #78350f 100%);
+  --grad-card-emerald: linear-gradient(145deg, #f0fdf4 0%, #ecfdf5 100%);
+  --grad-card-gold: linear-gradient(145deg, #fffbeb 0%, #fef3c7 100%);
+  --grad-footer: linear-gradient(180deg, #090e1a 0%, #020617 100%);
+
+  /* Shadows with Depth Hierarchy */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-glow-emerald: 0 0 20px rgba(16, 185, 129, 0.25);
+  --shadow-glow-gold: 0 0 20px rgba(245, 158, 11, 0.25);
 
   /* Typography Font Stacks */
   --font-quran: 'Amiri', 'KFGQPC Uthman Taha Naskh', 'Scheherazade New', 'Traditional Arabic', serif;
   --font-arabic-ui: 'IBM Plex Sans Arabic', 'Noto Naskh Arabic', sans-serif;
   --font-urdu: 'Noto Nastaliq Urdu', 'Nafees Nastaleeq', serif;
   --font-latin: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --trans-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* 3. Base Reset & Box Sizing */
@@ -61,9 +108,11 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #ffffff;
+  background-color: #fafbfc;
   color: var(--color-slate-900);
   line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* 4. Directional Styling (RTL / LTR) */
@@ -115,8 +164,8 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 2px solid var(--color-emerald-700);
-  outline-offset: 2px;
+  outline: 2px solid var(--color-emerald-600);
+  outline-offset: 3px;
 }
 
 /* 8. Responsive Layout Containers */
@@ -143,9 +192,311 @@ select:focus-visible {
   }
 }
 
-/* 9. Print Optimization */
+/* ==========================================================================
+   9. Apple-Style Glassmorphism & Translucency
+   ========================================================================== */
+.glass-header {
+  background-color: var(--glass-bg-header);
+  backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
+  border-bottom: 1px solid var(--glass-border-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.glass-panel {
+  background-color: var(--glass-bg-card);
+  backdrop-filter: blur(var(--glass-blur-md));
+  -webkit-backdrop-filter: blur(var(--glass-blur-md));
+  border: 1px solid var(--glass-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.glass-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(var(--glass-blur-sm));
+  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
+  border: 1px solid var(--glass-border-light);
+  color: var(--color-slate-700);
+  transition: all var(--trans-fast);
+}
+
+.glass-pill:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: var(--color-emerald-300);
+  color: var(--color-emerald-800);
+}
+
+.glass-input {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.95rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid var(--glass-border-light);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(var(--glass-blur-sm));
+  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: all var(--trans-normal);
+  color: var(--color-slate-900);
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: var(--color-emerald-600);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18), inset 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* ==========================================================================
+   10. Tactile Interactive Button System
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.625rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+  transition: transform var(--trans-fast), background var(--trans-fast), border-color var(--trans-fast), box-shadow var(--trans-fast), opacity var(--trans-fast);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Primary Sanctuary Emerald */
+.btn-primary {
+  background: var(--grad-emerald);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 4px rgba(4, 120, 87, 0.25), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #047857 0%, #065f46 50%, #022c22 100%);
+  box-shadow: var(--shadow-glow-emerald), 0 4px 10px rgba(4, 120, 87, 0.3);
+}
+
+/* Sacred Gold / Amber */
+.btn-gold {
+  background: var(--grad-gold);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 4px rgba(180, 83, 9, 0.25);
+}
+
+.btn-gold:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #92400e 100%);
+  box-shadow: var(--shadow-glow-gold), 0 4px 10px rgba(180, 83, 9, 0.3);
+}
+
+/* Apple Translucent Glass Button */
+.btn-glass {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(var(--glass-blur-sm));
+  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
+  color: var(--color-slate-800);
+  border: 1px solid var(--glass-border-light);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.btn-glass:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: var(--color-emerald-300);
+  color: var(--color-emerald-800);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Secondary Slate Button */
+.btn-secondary {
+  background-color: #ffffff;
+  color: var(--color-slate-700);
+  border: 1px solid var(--color-slate-300);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-slate-50);
+  border-color: var(--color-slate-400);
+  color: var(--color-slate-900);
+}
+
+/* Ghost / Minimal Button */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-slate-600);
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--color-slate-900);
+}
+
+/* ==========================================================================
+   11. Card Hierarchy & Editorial Styling
+   ========================================================================== */
+.card-editorial {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid var(--color-slate-200);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  transition: transform var(--trans-normal), box-shadow var(--trans-normal), border-color var(--trans-normal);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-editorial:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-emerald-300);
+  box-shadow: var(--shadow-lg), 0 0 15px rgba(16, 185, 129, 0.08);
+}
+
+.card-editorial:active {
+  transform: scale(0.99);
+}
+
+.card-gold {
+  border-color: var(--color-gold-200);
+  background: var(--grad-card-gold);
+}
+
+.card-gold:hover {
+  border-color: var(--color-gold-400);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-gold);
+}
+
+.card-emerald {
+  border-color: var(--color-emerald-200);
+  background: var(--grad-card-emerald);
+}
+
+.card-emerald:hover {
+  border-color: var(--color-emerald-400);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-emerald);
+}
+
+/* ==========================================================================
+   12. Micro-Interactions & Atmospheric Mesh
+   ========================================================================== */
+.atmospheric-hero {
+  position: relative;
+  background: var(--grad-hero);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.atmospheric-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 250px;
+  background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.15) 0%, rgba(254, 243, 199, 0.05) 50%, transparent 70%);
+  pointer-events: none;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+/* Floating Mobile Navigation Dock (iOS Style) */
+.mobile-bottom-dock {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  max-width: 420px;
+  background-color: var(--glass-bg-dock);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 15px rgba(16, 185, 129, 0.2);
+  border-radius: 9999px;
+  padding: 0.4rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 40;
+}
+
+@media (min-width: 768px) {
+  .mobile-bottom-dock {
+    display: none;
+  }
+}
+
+/* Custom Refined Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 13. Print Optimization */
 @media print {
-  header, footer, nav, button {
+  header, footer, nav, button, .mobile-bottom-dock {
     display: none !important;
   }
   body {
