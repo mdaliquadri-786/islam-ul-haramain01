@@ -1,0 +1,57 @@
+name: islamic_mobile
+description: "ISLAM UL HARAMAIN / إسلام الحرمين — Cross-Platform Mobile Application"
+publish_to: 'none'
+
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.4
+  flutter: ">=3.47.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State Management & Dependency Injection
+  flutter_riverpod: ^2.6.1
+
+  # Drift Local SQLite Database
+  drift: ^2.31.0
+  sqlite3: ^3.6.0
+  path_provider: ^2.1.5
+  path: ^1.9.1
+
+  # Secure Key Storage & Cryptography
+  flutter_secure_storage: ^9.2.4
+  crypto: ^3.0.7
+
+  # Declarative Routing
+  go_router: ^14.8.1
+
+  # HTTP Client for Supabase REST (M5.4)
+  http: ^1.6.0
+
+  # Internationalization
+  intl: ^0.20.2
+
+  # Identifiers & Utilities
+  uuid: ^4.5.1
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  drift_dev: ^2.31.0
+  build_runner: ^2.4.15
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+hooks:
+  user_defines:
+    sqlite3:
+      source: sqlite3mc

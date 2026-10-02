@@ -1,0 +1,1190 @@
+[
+  {
+    "id": 1,
+    "slug": "when-waking-up",
+    "nameArabic": "أذكار الاستيقاظ من النوم",
+    "nameEnglish": "When waking up",
+    "nameUrdu": "سو کر بیدار ہوتے وقت کے اذکار",
+    "sortOrder": 1,
+    "totalDuas": 4
+  },
+  {
+    "id": 2,
+    "slug": "when-wearing-a-garment",
+    "nameArabic": "دعاء لبس الثوب",
+    "nameEnglish": "When wearing a garment",
+    "nameUrdu": "لباس پہنتے وقت کی دعا",
+    "sortOrder": 2,
+    "totalDuas": 1
+  },
+  {
+    "id": 3,
+    "slug": "when-wearing-a-new-garment",
+    "nameArabic": "دعاء لبس الثوب الجديد",
+    "nameEnglish": "When wearing a new garment",
+    "nameUrdu": "نیا لباس پہنتے وقت کی دعا",
+    "sortOrder": 3,
+    "totalDuas": 1
+  },
+  {
+    "id": 4,
+    "slug": "to-someone-wearing-a-new-garment",
+    "nameArabic": "الدعاء لمن لبس ثوباً جديداً",
+    "nameEnglish": "To someone wearing a new garment",
+    "nameUrdu": "نئے لباس والے کو دعا",
+    "sortOrder": 4,
+    "totalDuas": 2
+  },
+  {
+    "id": 5,
+    "slug": "before-undressing",
+    "nameArabic": "ما يقول إذا وضع الثوب",
+    "nameEnglish": "Before undressing",
+    "nameUrdu": "لباس اتارتے وقت کا ذکر",
+    "sortOrder": 5,
+    "totalDuas": 1
+  },
+  {
+    "id": 6,
+    "slug": "before-entering-the-bathroom",
+    "nameArabic": "دعاء دخول الخلاء",
+    "nameEnglish": "Before entering the bathroom",
+    "nameUrdu": "بیت الخلاء میں داخل ہونے کی دعا",
+    "sortOrder": 6,
+    "totalDuas": 1
+  },
+  {
+    "id": 7,
+    "slug": "after-leaving-the-bathroom",
+    "nameArabic": "دعاء الخروج من الخلاء",
+    "nameEnglish": "After leaving the bathroom",
+    "nameUrdu": "بیت الخلاء سے نکلنے کی دعا",
+    "sortOrder": 7,
+    "totalDuas": 1
+  },
+  {
+    "id": 8,
+    "slug": "before-ablution",
+    "nameArabic": "الذكر قبل الوضوء",
+    "nameEnglish": "Before ablution",
+    "nameUrdu": "وضو شروع کرتے وقت کی دعا",
+    "sortOrder": 8,
+    "totalDuas": 1
+  },
+  {
+    "id": 9,
+    "slug": "upon-completing-the-ablution",
+    "nameArabic": "الذكر بعد الفراغ من الوضوء",
+    "nameEnglish": "Upon completing the ablution",
+    "nameUrdu": "وضو مکمل کرنے کے بعد کی دعا",
+    "sortOrder": 9,
+    "totalDuas": 3
+  },
+  {
+    "id": 10,
+    "slug": "remembrance-when-leaving-the-home",
+    "nameArabic": "الذكر عند الخروج من المنزل",
+    "nameEnglish": "Remembrance when leaving the home",
+    "nameUrdu": "گھر سے نکلتے وقت کی دعا",
+    "sortOrder": 10,
+    "totalDuas": 2
+  },
+  {
+    "id": 11,
+    "slug": "remembrance-upon-entering-the-home",
+    "nameArabic": "الذكر عند الدخول المنزل",
+    "nameEnglish": "Remembrance upon entering the home",
+    "nameUrdu": "گھر میں داخل ہوتے وقت کی دعا",
+    "sortOrder": 11,
+    "totalDuas": 1
+  },
+  {
+    "id": 12,
+    "slug": "when-going-to-the-mosque",
+    "nameArabic": "دعاء الذهاب إلى المسجد",
+    "nameEnglish": "When going to the mosque",
+    "nameUrdu": "مسجد جاتے وقت کی دعا",
+    "sortOrder": 12,
+    "totalDuas": 1
+  },
+  {
+    "id": 13,
+    "slug": "upon-entering-the-mosque",
+    "nameArabic": "دعاء دخول المسجد",
+    "nameEnglish": "Upon entering the mosque",
+    "nameUrdu": "مسجد میں داخل ہوتے وقت کی دعا",
+    "sortOrder": 13,
+    "totalDuas": 1
+  },
+  {
+    "id": 14,
+    "slug": "upon-leaving-the-mosque",
+    "nameArabic": "دعاء الخروج من المسجد",
+    "nameEnglish": "Upon leaving the mosque",
+    "nameUrdu": "مسجد سے نکلتے وقت کی دعا",
+    "sortOrder": 14,
+    "totalDuas": 1
+  },
+  {
+    "id": 15,
+    "slug": "concerning-the-athan-the-call-to-prayer",
+    "nameArabic": "أذكار الأذان",
+    "nameEnglish": "Concerning the athan (the call to prayer)",
+    "nameUrdu": "اذان کے وقت کے اذکار",
+    "sortOrder": 15,
+    "totalDuas": 5
+  },
+  {
+    "id": 16,
+    "slug": "at-the-start-of-the-prayer-after-takbeer",
+    "nameArabic": "دعاء الاستفتاح",
+    "nameEnglish": "At the start of the prayer (after takbeer)",
+    "nameUrdu": "دعائے استفتاح (تکبیر تحریمہ کے بعد)",
+    "sortOrder": 16,
+    "totalDuas": 6
+  },
+  {
+    "id": 17,
+    "slug": "while-bowing-in-prayer",
+    "nameArabic": "دعاء الركوع",
+    "nameEnglish": "While bowing in prayer",
+    "nameUrdu": "رکوع کی دعائیں",
+    "sortOrder": 17,
+    "totalDuas": 5
+  },
+  {
+    "id": 18,
+    "slug": "upon-rising-from-the-bowing-position",
+    "nameArabic": "دعاء الرفع من الركوع",
+    "nameEnglish": "Upon rising from the bowing position",
+    "nameUrdu": "رکوع سے اٹھتے وقت کی دعا",
+    "sortOrder": 18,
+    "totalDuas": 3
+  },
+  {
+    "id": 19,
+    "slug": "while-prostrating",
+    "nameArabic": "دعاء السجود",
+    "nameEnglish": "While prostrating",
+    "nameUrdu": "سجدے کی دعائیں",
+    "sortOrder": 19,
+    "totalDuas": 7
+  },
+  {
+    "id": 20,
+    "slug": "between-the-two-prostrations",
+    "nameArabic": "دعاء الجلسة بين السجدتين",
+    "nameEnglish": "Between the two prostrations",
+    "nameUrdu": "دونوں سجدوں کے درمیان کی دعا",
+    "sortOrder": 20,
+    "totalDuas": 2
+  },
+  {
+    "id": 21,
+    "slug": "when-prostrating-due-to-recitation-of-the-quran",
+    "nameArabic": "دعاء سجود التلاوة",
+    "nameEnglish": "When prostrating due to recitation of the Quran",
+    "nameUrdu": null,
+    "sortOrder": 21,
+    "totalDuas": 2
+  },
+  {
+    "id": 22,
+    "slug": "the-tashahhud",
+    "nameArabic": "التشهد",
+    "nameEnglish": "The Tashahhud",
+    "nameUrdu": "التحیات (تشہد)",
+    "sortOrder": 22,
+    "totalDuas": 1
+  },
+  {
+    "id": 23,
+    "slug": "prayers-upon-the-prophet-after-the-tashahhud",
+    "nameArabic": "الصلاة على النبي صلى الله عليه وسلم بعد التشهد",
+    "nameEnglish": "Prayers upon the Prophet ﷺ after the tashahhud",
+    "nameUrdu": "درود شریف (تشہد کے بعد)",
+    "sortOrder": 23,
+    "totalDuas": 2
+  },
+  {
+    "id": 24,
+    "slug": "after-the-last-tashahhud-and-before-salam",
+    "nameArabic": "الدعاء بعد التشهد الأخير وقبل السلام",
+    "nameEnglish": "After the last tashahhud and before salam",
+    "nameUrdu": null,
+    "sortOrder": 24,
+    "totalDuas": 11
+  },
+  {
+    "id": 25,
+    "slug": "after-salam",
+    "nameArabic": "الأذكار بعد السلام من الصلاة",
+    "nameEnglish": "After salam",
+    "nameUrdu": "نماز کے سلام کے بعد کے اذکار",
+    "sortOrder": 25,
+    "totalDuas": 8
+  },
+  {
+    "id": 26,
+    "slug": "for-seeking-guidance-in-forming-a-decision-or-choosing-the-proper-course",
+    "nameArabic": "دعاء صلاة الاستخارة",
+    "nameEnglish": "For seeking guidance in forming a decision or choosing the proper course",
+    "nameUrdu": "دعائے استخارہ",
+    "sortOrder": 26,
+    "totalDuas": 1
+  },
+  {
+    "id": 27,
+    "slug": "in-the-morning-and-evening",
+    "nameArabic": "أذكار الصباح والمساء",
+    "nameEnglish": "In the morning and evening",
+    "nameUrdu": "صبح اور شام کے مسنون اذکار",
+    "sortOrder": 27,
+    "totalDuas": 25
+  },
+  {
+    "id": 28,
+    "slug": "before-sleeping",
+    "nameArabic": "أذكار النوم",
+    "nameEnglish": "Before sleeping",
+    "nameUrdu": "سونے سے پہلے کے اذکار",
+    "sortOrder": 28,
+    "totalDuas": 13
+  },
+  {
+    "id": 29,
+    "slug": "when-tossing-and-turning-during-the-night",
+    "nameArabic": "الدعاء إذا تقلب ليلاً",
+    "nameEnglish": "When tossing and turning during the night",
+    "nameUrdu": "رات کو بے خوابی یا کروٹ بدلتے وقت",
+    "sortOrder": 29,
+    "totalDuas": 1
+  },
+  {
+    "id": 30,
+    "slug": "upon-experiencing-unrest-fear-apprehensiveness-during-sleep",
+    "nameArabic": "دعاء القلق والفزع في النوم ومن بلي بالوحشة",
+    "nameEnglish": "Upon experiencing unrest, fear, apprehensiveness during sleep",
+    "nameUrdu": null,
+    "sortOrder": 30,
+    "totalDuas": 1
+  },
+  {
+    "id": 31,
+    "slug": "upon-seeing-a-good-dream-or-a-bad-dream",
+    "nameArabic": "ما يفعل من رأى الرؤيا أو الحلم",
+    "nameEnglish": "Upon seeing a good dream or a bad dream",
+    "nameUrdu": "اچھا یا برا خواب دیکھنے کے بعد",
+    "sortOrder": 31,
+    "totalDuas": 2
+  },
+  {
+    "id": 32,
+    "slug": "qunoot-al-witr",
+    "nameArabic": "دعاء قنوت الوتر",
+    "nameEnglish": "Qunoot Al-Witr",
+    "nameUrdu": "دعائے قنوت وتر",
+    "sortOrder": 32,
+    "totalDuas": 3
+  },
+  {
+    "id": 33,
+    "slug": "immediately-after-salam-of-the-witr-prayer",
+    "nameArabic": "الذكر عقب السلام من الوتر",
+    "nameEnglish": "Immediately after salam of the witr prayer",
+    "nameUrdu": "وتر کے سلام کے فوراً بعد کا ذکر",
+    "sortOrder": 33,
+    "totalDuas": 1
+  },
+  {
+    "id": 34,
+    "slug": "for-anxiety-and-sorrow",
+    "nameArabic": "دعاء الهم والحزن",
+    "nameEnglish": "For anxiety and sorrow",
+    "nameUrdu": "فکر، غم اور پریشانی کی دعا",
+    "sortOrder": 34,
+    "totalDuas": 2
+  },
+  {
+    "id": 35,
+    "slug": "for-one-in-distress",
+    "nameArabic": "دعاء الكرب",
+    "nameEnglish": "For one in distress",
+    "nameUrdu": "سخت مصیبت اور بے چینی کی دعا",
+    "sortOrder": 35,
+    "totalDuas": 4
+  },
+  {
+    "id": 36,
+    "slug": "upon-encountering-an-enemy-or-those-of-authority",
+    "nameArabic": "دعاء لقاء العدو وذي السلطان",
+    "nameEnglish": "Upon encountering an enemy or those of authority",
+    "nameUrdu": "دشمن یا ظالم حاکم سے سامنا ہونے پر",
+    "sortOrder": 36,
+    "totalDuas": 3
+  },
+  {
+    "id": 37,
+    "slug": "for-one-afraid-of-the-rulers-injustice",
+    "nameArabic": "دعاء من خاف ظلم السلطان",
+    "nameEnglish": "For one afraid of the ruler's injustice",
+    "nameUrdu": "حاکم کے ظلم سے خوفزدہ شخص کی دعا",
+    "sortOrder": 37,
+    "totalDuas": 2
+  },
+  {
+    "id": 38,
+    "slug": "against-enemies",
+    "nameArabic": "الدعاء على العدو",
+    "nameEnglish": "Against enemies",
+    "nameUrdu": "دشمنوں کے خلاف دعا",
+    "sortOrder": 38,
+    "totalDuas": 1
+  },
+  {
+    "id": 39,
+    "slug": "when-being-afraid-of-a-group-of-people",
+    "nameArabic": "ما يقول من خاف قوماً",
+    "nameEnglish": "When being afraid of a group of people",
+    "nameUrdu": null,
+    "sortOrder": 39,
+    "totalDuas": 1
+  },
+  {
+    "id": 40,
+    "slug": "for-one-afflicted-with-doubt-in-his-faith",
+    "nameArabic": "دعاء من أصابه شك في الإيمان",
+    "nameEnglish": "For one afflicted with doubt in his faith",
+    "nameUrdu": "ایمان میں وسوسہ آنے پر دعا",
+    "sortOrder": 40,
+    "totalDuas": 3
+  },
+  {
+    "id": 41,
+    "slug": "settling-a-debt",
+    "nameArabic": "الدعاء قضاء الدين",
+    "nameEnglish": "Settling a debt",
+    "nameUrdu": "قرض کی ادائیگی کی دعا",
+    "sortOrder": 41,
+    "totalDuas": 2
+  },
+  {
+    "id": 42,
+    "slug": "for-one-afflicted-by-whisperings-in-prayer-or-recitation",
+    "nameArabic": "دعاء الوسوسة في الصلاة والقراءة",
+    "nameEnglish": "For one afflicted by whisperings in prayer or recitation",
+    "nameUrdu": "نماز یا تلاوت میں وسوسے دور کرنے کی دعا",
+    "sortOrder": 42,
+    "totalDuas": 1
+  },
+  {
+    "id": 43,
+    "slug": "for-one-whose-affairs-have-become-difficult",
+    "nameArabic": "دعاء من استصعب عليه أمر",
+    "nameEnglish": "For one whose affairs have become difficult",
+    "nameUrdu": "مشکل آسان کرنے کی دعا",
+    "sortOrder": 43,
+    "totalDuas": 1
+  },
+  {
+    "id": 44,
+    "slug": "upon-committing-a-sin",
+    "nameArabic": "ما يقول ويفعل من أذنب ذنباً",
+    "nameEnglish": "Upon committing a sin",
+    "nameUrdu": "گناہ سرزد ہونے پر توبہ کی دعا",
+    "sortOrder": 44,
+    "totalDuas": 1
+  },
+  {
+    "id": 45,
+    "slug": "for-expelling-the-devil-and-his-whisperings",
+    "nameArabic": "دعاء طرد الشيطان ووساوسه",
+    "nameEnglish": "For expelling the devil and his whisperings",
+    "nameUrdu": "شیطان اور اس کے وسوسوں کو بھگانے کی دعا",
+    "sortOrder": 45,
+    "totalDuas": 3
+  },
+  {
+    "id": 46,
+    "slug": "when-stricken-with-a-mishap-or-overtaken-by-an-affair",
+    "nameArabic": "الدعاء حينما يقع مالا يرضاه أو غلب على أمره",
+    "nameEnglish": "When stricken with a mishap or overtaken by an affair",
+    "nameUrdu": "ناگوار بات یا حادثہ پیش آنے پر دعا",
+    "sortOrder": 46,
+    "totalDuas": 1
+  },
+  {
+    "id": 47,
+    "slug": "congratulation-on-the-occasion-of-a-birth-and-its-reply",
+    "nameArabic": "تهنئة المولود له وجوابه",
+    "nameEnglish": "Congratulation on the occasion of a birth and its reply",
+    "nameUrdu": null,
+    "sortOrder": 47,
+    "totalDuas": 1
+  },
+  {
+    "id": 48,
+    "slug": "placing-childen-under-allahs-protection",
+    "nameArabic": "ما يعوذ به الأولاد",
+    "nameEnglish": "Placing childen under Allah’s protection",
+    "nameUrdu": null,
+    "sortOrder": 48,
+    "totalDuas": 1
+  },
+  {
+    "id": 49,
+    "slug": "when-visiting-the-sick",
+    "nameArabic": "الدعاء للمريض في عيادته",
+    "nameEnglish": "When visiting the sick",
+    "nameUrdu": "مریض کی عیادت کے وقت کی دعا",
+    "sortOrder": 49,
+    "totalDuas": 2
+  },
+  {
+    "id": 50,
+    "slug": "excellence-of-visiting-the-sick",
+    "nameArabic": "فضل عيادة المريض",
+    "nameEnglish": "Excellence of visiting the sick",
+    "nameUrdu": "مریض کی عیادت کی فضیلت",
+    "sortOrder": 50,
+    "totalDuas": 1
+  },
+  {
+    "id": 51,
+    "slug": "when-the-sick-have-renounced-all-hope-of-life",
+    "nameArabic": "دعاء المريض الذي يئس من حياته",
+    "nameEnglish": "When the sick have renounced all hope of life",
+    "nameUrdu": "مایوس العلاج مریض کی دعا",
+    "sortOrder": 51,
+    "totalDuas": 3
+  },
+  {
+    "id": 52,
+    "slug": "instruction-for-the-one-nearing-death",
+    "nameArabic": "تلقين المحتضر",
+    "nameEnglish": "Instruction for the one nearing death",
+    "nameUrdu": "قریب المرگ کو تلقین (کلمہ)",
+    "sortOrder": 52,
+    "totalDuas": 1
+  },
+  {
+    "id": 53,
+    "slug": "for-one-afflicted-by-a-calamity",
+    "nameArabic": "دعاء من أصيب بمصيبة",
+    "nameEnglish": "For one afflicted by a calamity",
+    "nameUrdu": "مصیبت کے وقت کی دعا (انا للہ)",
+    "sortOrder": 53,
+    "totalDuas": 1
+  },
+  {
+    "id": 54,
+    "slug": "when-closing-the-eyes-of-the-deceased",
+    "nameArabic": "الدعاء عند إغماض الميت",
+    "nameEnglish": "When closing the eyes of the deceased",
+    "nameUrdu": "میت کی آنکھیں بند کرتے وقت کی دعا",
+    "sortOrder": 54,
+    "totalDuas": 1
+  },
+  {
+    "id": 55,
+    "slug": "for-the-deceased-at-the-funeral-prayer",
+    "nameArabic": "الدعاء للميت في الصلاة عليه",
+    "nameEnglish": "For the deceased at the funeral prayer",
+    "nameUrdu": "نماز جنازہ کی دعا",
+    "sortOrder": 55,
+    "totalDuas": 4
+  },
+  {
+    "id": 56,
+    "slug": "when-the-deceased-is-a-child-during-the-funeral-prayer",
+    "nameArabic": "الدعاء للفرط في الصلاة عليه",
+    "nameEnglish": "When the deceased is a child, during the funeral prayer",
+    "nameUrdu": "نابالغ بچے کی نماز جنازہ کی دعا",
+    "sortOrder": 56,
+    "totalDuas": 2
+  },
+  {
+    "id": 57,
+    "slug": "condolence",
+    "nameArabic": "دعاء التعزية",
+    "nameEnglish": "Condolence",
+    "nameUrdu": "تعزیت کے کلمات",
+    "sortOrder": 57,
+    "totalDuas": 1
+  },
+  {
+    "id": 58,
+    "slug": "placing-the-deceased-in-the-grave",
+    "nameArabic": "الدعاء عند إدخال الميت القبر",
+    "nameEnglish": "Placing the deceased in the grave",
+    "nameUrdu": "میت کو قبر میں اتارتے وقت کی دعا",
+    "sortOrder": 58,
+    "totalDuas": 1
+  },
+  {
+    "id": 59,
+    "slug": "after-burying-the-deceased",
+    "nameArabic": "الدعاء بعد دفن الميت",
+    "nameEnglish": "After burying the deceased",
+    "nameUrdu": "تدفین کے بعد کی دعا",
+    "sortOrder": 59,
+    "totalDuas": 1
+  },
+  {
+    "id": 60,
+    "slug": "visiting-the-graves",
+    "nameArabic": "دعاء زيارة القبور",
+    "nameEnglish": "Visiting the graves",
+    "nameUrdu": "زیارت قبور کی دعا",
+    "sortOrder": 60,
+    "totalDuas": 1
+  },
+  {
+    "id": 61,
+    "slug": "during-a-wind-storm",
+    "nameArabic": "دعاء الريح",
+    "nameEnglish": "During a wind storm",
+    "nameUrdu": "آندھی اور تیز ہوا کے وقت کی دعا",
+    "sortOrder": 61,
+    "totalDuas": 2
+  },
+  {
+    "id": 62,
+    "slug": "upon-hearing-thunder",
+    "nameArabic": "دعاء الرعد",
+    "nameEnglish": "Upon hearing thunder",
+    "nameUrdu": "بجلی کی گرج سن کر دعا",
+    "sortOrder": 62,
+    "totalDuas": 1
+  },
+  {
+    "id": 63,
+    "slug": "for-rain",
+    "nameArabic": "من أدعية الاستسقاء",
+    "nameEnglish": "For rain",
+    "nameUrdu": "طلب باران (استسقاء) کی دعا",
+    "sortOrder": 63,
+    "totalDuas": 3
+  },
+  {
+    "id": 64,
+    "slug": "when-it-rains",
+    "nameArabic": "الدعاء إذا نزل المطر",
+    "nameEnglish": "When it rains",
+    "nameUrdu": "بارش برستے وقت کی دعا",
+    "sortOrder": 64,
+    "totalDuas": 1
+  },
+  {
+    "id": 65,
+    "slug": "after-rainfall",
+    "nameArabic": "الذكر بعد نزول المطر",
+    "nameEnglish": "After rainfall",
+    "nameUrdu": "بارش کے بعد کا ذکر",
+    "sortOrder": 65,
+    "totalDuas": 1
+  },
+  {
+    "id": 66,
+    "slug": "asking-for-clear-skies",
+    "nameArabic": "من أدعية الاستصحاء",
+    "nameEnglish": "Asking for clear skies",
+    "nameUrdu": "بارش بند ہونے اور بادل چھٹنے کی دعا",
+    "sortOrder": 66,
+    "totalDuas": 1
+  },
+  {
+    "id": 67,
+    "slug": "upon-sighting-the-crescent-moon",
+    "nameArabic": "دعاء رؤية الهلال",
+    "nameEnglish": "Upon sighting the crescent moon",
+    "nameUrdu": "نیا چاند دیکھنے کی دعا",
+    "sortOrder": 67,
+    "totalDuas": 1
+  },
+  {
+    "id": 68,
+    "slug": "upon-breaking-fast",
+    "nameArabic": "الدعاء عند إفطار الصائم",
+    "nameEnglish": "Upon breaking fast",
+    "nameUrdu": "افطار کے وقت کی دعا",
+    "sortOrder": 68,
+    "totalDuas": 2
+  },
+  {
+    "id": 69,
+    "slug": "before-eating",
+    "nameArabic": "الدعاء قبل الطعام",
+    "nameEnglish": "Before eating",
+    "nameUrdu": "کھانا شروع کرنے کی دعا",
+    "sortOrder": 69,
+    "totalDuas": 2
+  },
+  {
+    "id": 70,
+    "slug": "upon-completing-the-meal",
+    "nameArabic": "الدعاء عند الفراغ من الطعام",
+    "nameEnglish": "Upon completing the meal",
+    "nameUrdu": "کھانے سے فارغ ہونے کی دعا",
+    "sortOrder": 70,
+    "totalDuas": 2
+  },
+  {
+    "id": 71,
+    "slug": "of-the-guest-for-the-host",
+    "nameArabic": "دعاء الضيف لصاحب الطعام",
+    "nameEnglish": "Of the guest for the host",
+    "nameUrdu": "مہمان کی میزبان کے لیے دعا",
+    "sortOrder": 71,
+    "totalDuas": 1
+  },
+  {
+    "id": 72,
+    "slug": "to-one-who-intends-to-give-food-or-drink",
+    "nameArabic": "الدعاء لمن سقاه أو إذا أراد ذلك",
+    "nameEnglish": "To one who intends to give food or drink",
+    "nameUrdu": null,
+    "sortOrder": 72,
+    "totalDuas": 1
+  },
+  {
+    "id": 73,
+    "slug": "when-breaking-fast-in-someones-home",
+    "nameArabic": "الدعاء إذا أفطر عند أهل بيت",
+    "nameEnglish": "When breaking fast in someone’s home",
+    "nameUrdu": "کسی کے ہاں روزہ افطار کرنے کی دعا",
+    "sortOrder": 73,
+    "totalDuas": 1
+  },
+  {
+    "id": 74,
+    "slug": "by-one-fasting-when-presented-with-food-and-does-not-break-his-fast",
+    "nameArabic": "دعاء الصائم إذا حضر الطعام ولم يفطر",
+    "nameEnglish": "By one fasting when presented with food and does not break his fast",
+    "nameUrdu": "روزہ دار کو کھانے کی دعوت پر دعا",
+    "sortOrder": 74,
+    "totalDuas": 1
+  },
+  {
+    "id": 75,
+    "slug": "when-insulted-while-fasting",
+    "nameArabic": "ما يقول الصائم إذا سابه أحد",
+    "nameEnglish": "When insulted while fasting",
+    "nameUrdu": "روزہ کی حالت میں کوئی گالی دے تو کیا کہے",
+    "sortOrder": 75,
+    "totalDuas": 1
+  },
+  {
+    "id": 76,
+    "slug": "upon-seeing-the-early-or-premature-fruit",
+    "nameArabic": "الدعاء عند رؤية باكورة الثمر",
+    "nameEnglish": "Upon seeing the early or premature fruit",
+    "nameUrdu": "نیا پھل دیکھنے کی دعا",
+    "sortOrder": 76,
+    "totalDuas": 1
+  },
+  {
+    "id": 77,
+    "slug": "upon-sneezing",
+    "nameArabic": "دعاء العطاس",
+    "nameEnglish": "Upon sneezing",
+    "nameUrdu": "چھینک آنے کے آداب و دعائیں",
+    "sortOrder": 77,
+    "totalDuas": 1
+  },
+  {
+    "id": 78,
+    "slug": "when-a-disbeliever-praises-allah-after-sneezing",
+    "nameArabic": "ما يقالُ للكافر إذا عطس فحمد الله",
+    "nameEnglish": "When a disbeliever praises Allah after sneezing",
+    "nameUrdu": null,
+    "sortOrder": 78,
+    "totalDuas": 1
+  },
+  {
+    "id": 79,
+    "slug": "to-the-newlywed",
+    "nameArabic": "الدعاء للمتزوج",
+    "nameEnglish": "To the newlywed",
+    "nameUrdu": "شادی کے موقع پر دولہا دلہن کو دعا",
+    "sortOrder": 79,
+    "totalDuas": 1
+  },
+  {
+    "id": 80,
+    "slug": "on-the-wedding-night-or-when-buying-an-animal",
+    "nameArabic": "دعاء المتزوج لنفسه ودعاء شراء الدابة",
+    "nameEnglish": "On the wedding night or when buying an animal",
+    "nameUrdu": null,
+    "sortOrder": 80,
+    "totalDuas": 1
+  },
+  {
+    "id": 81,
+    "slug": "before-sexual-intercourse-with-the-wife",
+    "nameArabic": "الدعاء قبل إتيان الزوجة",
+    "nameEnglish": "Before sexual intercourse with the wife",
+    "nameUrdu": null,
+    "sortOrder": 81,
+    "totalDuas": 1
+  },
+  {
+    "id": 82,
+    "slug": "when-angry",
+    "nameArabic": "دعاء الغضب",
+    "nameEnglish": "When angry",
+    "nameUrdu": "غصہ آنے کے وقت کی دعا",
+    "sortOrder": 82,
+    "totalDuas": 1
+  },
+  {
+    "id": 83,
+    "slug": "upon-seeing-someone-in-trial-or-tribulation",
+    "nameArabic": "دعاء من رأى مبتلى",
+    "nameEnglish": "Upon seeing someone in trial or tribulation",
+    "nameUrdu": "مصیبت زدہ کو دیکھ کر پڑھنے کی دعا",
+    "sortOrder": 83,
+    "totalDuas": 1
+  },
+  {
+    "id": 84,
+    "slug": "at-a-sitting-or-gathering",
+    "nameArabic": "ما يقال في المجلس",
+    "nameEnglish": "At a sitting or gathering",
+    "nameUrdu": null,
+    "sortOrder": 84,
+    "totalDuas": 1
+  },
+  {
+    "id": 85,
+    "slug": "for-the-expiation-of-sins-said-at-the-conclusion-of-a-sitting-or-gathering",
+    "nameArabic": "كفارة المجلس ومايختم به المجالس",
+    "nameEnglish": "For the expiation of sins, said at the conclusion of a sitting or gathering",
+    "nameUrdu": "کفارہ مجلس کی دعا",
+    "sortOrder": 85,
+    "totalDuas": 1
+  },
+  {
+    "id": 86,
+    "slug": "returning-a-supplication-of-forgiveness",
+    "nameArabic": "الدعاء لمن قال غفر الله لك",
+    "nameEnglish": "Returning a supplication of forgiveness",
+    "nameUrdu": null,
+    "sortOrder": 86,
+    "totalDuas": 1
+  },
+  {
+    "id": 87,
+    "slug": "to-one-who-does-you-a-favour",
+    "nameArabic": "الدعاء لمن صنع إليك معروفاً",
+    "nameEnglish": "To one who does you a favour",
+    "nameUrdu": "احسان کرنے والے کو جزاک اللہ خیرا کہنا",
+    "sortOrder": 87,
+    "totalDuas": 1
+  },
+  {
+    "id": 88,
+    "slug": "protection-from-the-dajjal",
+    "nameArabic": "ما يعصم به من الدجال",
+    "nameEnglish": "Protection from the Dajjal",
+    "nameUrdu": "فتنہ دجال سے بچاؤ کی دعا",
+    "sortOrder": 88,
+    "totalDuas": 1
+  },
+  {
+    "id": 89,
+    "slug": "to-one-who-pronounces-his-love-for-you-for-allahs-sake",
+    "nameArabic": "الدعاء لمن قال إني أحبك في الله",
+    "nameEnglish": "To one who pronounces his love for you, for Allah’s sake",
+    "nameUrdu": "محبت فی اللہ کا اظہار کرنے والے کو دعا",
+    "sortOrder": 89,
+    "totalDuas": 1
+  },
+  {
+    "id": 90,
+    "slug": "to-one-who-has-offered-you-some-of-his-wealth",
+    "nameArabic": "الدعاء لمن عرض عليك ماله",
+    "nameEnglish": "To one who has offered you some of his wealth",
+    "nameUrdu": null,
+    "sortOrder": 90,
+    "totalDuas": 1
+  },
+  {
+    "id": 91,
+    "slug": "to-the-debtor-when-his-debt-is-settled",
+    "nameArabic": "الدعاء لمن أقرض عند القضاء",
+    "nameEnglish": "To the debtor when his debt is settled",
+    "nameUrdu": null,
+    "sortOrder": 91,
+    "totalDuas": 1
+  },
+  {
+    "id": 92,
+    "slug": "for-fear-of-shirk",
+    "nameArabic": "دعاء الخوف من الشرك",
+    "nameEnglish": "For fear of shirk",
+    "nameUrdu": "شرک کے خوف کے وقت کی دعا",
+    "sortOrder": 92,
+    "totalDuas": 1
+  },
+  {
+    "id": 93,
+    "slug": "to-someone-who-says-may-allah-bless-you",
+    "nameArabic": "الدعاء لمن قال بارك الله فيك",
+    "nameEnglish": "To someone who says \"May Allah bless you\"",
+    "nameUrdu": null,
+    "sortOrder": 93,
+    "totalDuas": 1
+  },
+  {
+    "id": 94,
+    "slug": "the-scorn-of-ascribing-things-to-evil-omens",
+    "nameArabic": "دعاء كراهية الطيرة",
+    "nameEnglish": "The scorn of ascribing things to evil omens",
+    "nameUrdu": null,
+    "sortOrder": 94,
+    "totalDuas": 1
+  },
+  {
+    "id": 95,
+    "slug": "when-mounting-an-animal-or-any-means-of-transport",
+    "nameArabic": "دعاء ركوب الدابة",
+    "nameEnglish": "When mounting an animal or any means of transport",
+    "nameUrdu": null,
+    "sortOrder": 95,
+    "totalDuas": 1
+  },
+  {
+    "id": 96,
+    "slug": "for-travel",
+    "nameArabic": "دعاء السفر",
+    "nameEnglish": "For travel",
+    "nameUrdu": "سفر کی مسنون دعا",
+    "sortOrder": 96,
+    "totalDuas": 1
+  },
+  {
+    "id": 97,
+    "slug": "upon-entering-a-town-or-village",
+    "nameArabic": "دعاء دخول القرية أو البلدة",
+    "nameEnglish": "Upon entering a town or village",
+    "nameUrdu": null,
+    "sortOrder": 97,
+    "totalDuas": 1
+  },
+  {
+    "id": 98,
+    "slug": "when-entering-the-market",
+    "nameArabic": "دعاء دخول السوق",
+    "nameEnglish": "When entering the market",
+    "nameUrdu": "بازار میں داخل ہوتے وقت کی دعا",
+    "sortOrder": 98,
+    "totalDuas": 1
+  },
+  {
+    "id": 99,
+    "slug": "when-the-mounted-animal-or-mean-of-transport-stumbles",
+    "nameArabic": "الدعاء إذا تعس المركوب",
+    "nameEnglish": "When the mounted animal (or mean of transport) stumbles",
+    "nameUrdu": null,
+    "sortOrder": 99,
+    "totalDuas": 1
+  },
+  {
+    "id": 100,
+    "slug": "supplication-of-the-traveller-for-the-resident",
+    "nameArabic": "دعاء المسافر للمقيم",
+    "nameEnglish": "Supplication of the traveller for the resident",
+    "nameUrdu": null,
+    "sortOrder": 100,
+    "totalDuas": 1
+  },
+  {
+    "id": 101,
+    "slug": "supplication-of-the-resident-for-the-traveller",
+    "nameArabic": "دعاء المقيم للمسافر",
+    "nameEnglish": "Supplication of the resident for the traveller",
+    "nameUrdu": "مقیم کی مسافر کے لیے دعا",
+    "sortOrder": 101,
+    "totalDuas": 2
+  },
+  {
+    "id": 102,
+    "slug": "takbir-and-tasbih-during-travel",
+    "nameArabic": "التكبير والتسبيح في سير السفر",
+    "nameEnglish": "Takbir and Tasbih during travel",
+    "nameUrdu": null,
+    "sortOrder": 102,
+    "totalDuas": 1
+  },
+  {
+    "id": 103,
+    "slug": "prayer-of-the-traveller-as-dawn-approaches",
+    "nameArabic": "دعاء المسافر إذا أسحر",
+    "nameEnglish": "Prayer of the traveller as dawn approaches",
+    "nameUrdu": null,
+    "sortOrder": 103,
+    "totalDuas": 1
+  },
+  {
+    "id": 104,
+    "slug": "stopping-or-lodging-somewhere-in-travel-and-otherwise",
+    "nameArabic": "الدعاء إذا نزل منزلا في سفر أو غيره",
+    "nameEnglish": "Stopping or lodging somewhere in travel and otherwise",
+    "nameUrdu": null,
+    "sortOrder": 104,
+    "totalDuas": 1
+  },
+  {
+    "id": 105,
+    "slug": "while-returning-from-travel",
+    "nameArabic": "ذكر الرجوع من السفر",
+    "nameEnglish": "While returning from travel",
+    "nameUrdu": "سفر سے واپسی کی دعا",
+    "sortOrder": 105,
+    "totalDuas": 1
+  },
+  {
+    "id": 106,
+    "slug": "what-to-say-upon-receiving-pleasing-or-displeasing-news",
+    "nameArabic": "ما يقول ويفعل من أتاه أمر يسره أو يكرهه",
+    "nameEnglish": "What to say upon receiving pleasing or displeasing news",
+    "nameUrdu": null,
+    "sortOrder": 106,
+    "totalDuas": 1
+  },
+  {
+    "id": 107,
+    "slug": "excellence-of-sending-prayers-upon-the-prophet-saws",
+    "nameArabic": "فضل الصلاة على النبي صلى الله عليه وسلم",
+    "nameEnglish": "Excellence of sending prayers upon the Prophet (saws)",
+    "nameUrdu": "نبی کریم ﷺ پر درود بھیجنے کی فضیلت",
+    "sortOrder": 107,
+    "totalDuas": 5
+  },
+  {
+    "id": 108,
+    "slug": "excellence-of-spreading-the-islamic-greeting",
+    "nameArabic": "إفشاء السلام",
+    "nameEnglish": "Excellence of spreading the Islamic greeting",
+    "nameUrdu": "سلام پھیلانے کی فضیلت",
+    "sortOrder": 108,
+    "totalDuas": 3
+  },
+  {
+    "id": 109,
+    "slug": "returning-a-greeting-to-a-disbeliever",
+    "nameArabic": "كيف يرد السلام على الكافر إذا سلم",
+    "nameEnglish": "Returning a greeting to a disbeliever",
+    "nameUrdu": "غیر مسلم کے سلام کا جواب",
+    "sortOrder": 109,
+    "totalDuas": 1
+  },
+  {
+    "id": 110,
+    "slug": "upon-hearing-a-rooster-crow-or-the-braying-of-a-donkey",
+    "nameArabic": "دعاء صياح الديك ونهيق الحمار",
+    "nameEnglish": "Upon hearing a rooster crow or the braying of a donkey",
+    "nameUrdu": null,
+    "sortOrder": 110,
+    "totalDuas": 1
+  },
+  {
+    "id": 111,
+    "slug": "upon-hearing-the-barking-of-dogs-at-night",
+    "nameArabic": "دعاء نباح الكلاب بالليل",
+    "nameEnglish": "Upon hearing the barking of dogs at night",
+    "nameUrdu": null,
+    "sortOrder": 111,
+    "totalDuas": 1
+  },
+  {
+    "id": 112,
+    "slug": "for-one-you-have-insulted",
+    "nameArabic": "الدعاء لمن سببته",
+    "nameEnglish": "For one you have insulted",
+    "nameUrdu": null,
+    "sortOrder": 112,
+    "totalDuas": 1
+  },
+  {
+    "id": 113,
+    "slug": "the-etiquette-of-praising-a-fellow-muslim",
+    "nameArabic": "ما يقول المسلم إذا مدح المسلم",
+    "nameEnglish": "The etiquette of praising a fellow Muslim",
+    "nameUrdu": "کسی مسلمان کی تعریف کرنے کے آداب",
+    "sortOrder": 113,
+    "totalDuas": 1
+  },
+  {
+    "id": 114,
+    "slug": "for-the-one-that-have-been-praised",
+    "nameArabic": "ما يقول المسلم إذا زكي",
+    "nameEnglish": "For the one that have been praised",
+    "nameUrdu": null,
+    "sortOrder": 114,
+    "totalDuas": 1
+  },
+  {
+    "id": 115,
+    "slug": "the-talbiya-for-the-one-doing-hajj-or-umrah",
+    "nameArabic": "كيف يلبي المحرم في الحج أو العمرة",
+    "nameEnglish": "The Talbiya for the one doing Hajj or 'Umrah",
+    "nameUrdu": null,
+    "sortOrder": 115,
+    "totalDuas": 1
+  },
+  {
+    "id": 116,
+    "slug": "the-takb-r-passing-the-black-stone",
+    "nameArabic": "التكبيرة إذا أتي الركن الأسود",
+    "nameEnglish": "The Takbîr passing the black stone",
+    "nameUrdu": null,
+    "sortOrder": 116,
+    "totalDuas": 1
+  },
+  {
+    "id": 117,
+    "slug": "between-the-yemeni-corner-and-the-black-stone",
+    "nameArabic": "الدعاء بين الركن اليماني والحجر الأسود",
+    "nameEnglish": "Between the Yemeni corner and the black stone",
+    "nameUrdu": "رکن یمانی اور حجر اسود کے درمیان کی دعا",
+    "sortOrder": 117,
+    "totalDuas": 1
+  },
+  {
+    "id": 118,
+    "slug": "when-at-mount-safa-and-mount-marwah",
+    "nameArabic": "دعاء الوقوف على الصفا والمروة",
+    "nameEnglish": "When at Mount Safa and Mount Marwah",
+    "nameUrdu": "صفا اور مروہ پر کھڑے ہو کر دعائیں",
+    "sortOrder": 118,
+    "totalDuas": 1
+  },
+  {
+    "id": 119,
+    "slug": "the-day-of-arafah",
+    "nameArabic": "الدعاء يوم عرفة",
+    "nameEnglish": "The Day of 'Arafah",
+    "nameUrdu": "یوم عرفہ کی دعا",
+    "sortOrder": 119,
+    "totalDuas": 1
+  },
+  {
+    "id": 120,
+    "slug": "remembrance-at-muzdalifa",
+    "nameArabic": "الذكر عند المشعر الحرام",
+    "nameEnglish": "Remembrance at Muzdalifa",
+    "nameUrdu": null,
+    "sortOrder": 120,
+    "totalDuas": 1
+  },
+  {
+    "id": 121,
+    "slug": "takbir-when-throwing-each-pebble-at-the-jamarat",
+    "nameArabic": "التكبيرة عند رمي الجمار مع كل حصاة",
+    "nameEnglish": "Takbir when throwing each pebble at the Jamarat",
+    "nameUrdu": null,
+    "sortOrder": 121,
+    "totalDuas": 1
+  },
+  {
+    "id": 122,
+    "slug": "at-times-of-amazement-and-that-which-delights",
+    "nameArabic": "ما يقول عند التعجب والأمر السار",
+    "nameEnglish": "At times of amazement and that which delights",
+    "nameUrdu": "تعجب اور خوشی کے لمحات میں",
+    "sortOrder": 122,
+    "totalDuas": 2
+  },
+  {
+    "id": 123,
+    "slug": "upon-receiving-pleasant-news",
+    "nameArabic": "ما يفعل من أتاه أمر يسره",
+    "nameEnglish": "Upon receiving pleasant news",
+    "nameUrdu": "خوشخبری ملنے پر سجدہ شکر",
+    "sortOrder": 123,
+    "totalDuas": 1
+  },
+  {
+    "id": 124,
+    "slug": "when-feeling-some-pain-in-the-body",
+    "nameArabic": "ما يقول من أحس وجعاً في جسده",
+    "nameEnglish": "When feeling some pain in the body",
+    "nameUrdu": "جسم میں درد محسوس ہونے پر دم",
+    "sortOrder": 124,
+    "totalDuas": 1
+  },
+  {
+    "id": 125,
+    "slug": "when-in-fear-of-afflicting-something-with-an-evil-eye-from-oneself",
+    "nameArabic": "دعاء من خشي أن يصيب شيئاً بعينه",
+    "nameEnglish": "When in fear of afflicting something with an (evil) eye from oneself",
+    "nameUrdu": null,
+    "sortOrder": 125,
+    "totalDuas": 1
+  },
+  {
+    "id": 126,
+    "slug": "when-startled",
+    "nameArabic": "ما يقال عند الفزع",
+    "nameEnglish": "When startled",
+    "nameUrdu": null,
+    "sortOrder": 126,
+    "totalDuas": 1
+  },
+  {
+    "id": 127,
+    "slug": "when-slaughtering-or-offering-a-sacrifice",
+    "nameArabic": "ما يقول عند الذبح أو النحر",
+    "nameEnglish": "When slaughtering or offering a sacrifice",
+    "nameUrdu": null,
+    "sortOrder": 127,
+    "totalDuas": 1
+  },
+  {
+    "id": 128,
+    "slug": "to-ward-off-the-plot-of-the-rebellious-devils",
+    "nameArabic": "ما يقول لرد كيد مردة الشياطين",
+    "nameEnglish": "To ward off the plot of the rebellious devils",
+    "nameUrdu": "سرکش شیاطین کی سازش کو دفع کرنے کی دعا",
+    "sortOrder": 128,
+    "totalDuas": 1
+  },
+  {
+    "id": 129,
+    "slug": "seeking-forgiveness-and-repentance",
+    "nameArabic": "الاستغفار والتوبة",
+    "nameEnglish": "Seeking forgiveness and repentance",
+    "nameUrdu": "استغفار اور توبہ کی دعائیں",
+    "sortOrder": 129,
+    "totalDuas": 6
+  },
+  {
+    "id": 130,
+    "slug": "excellence-of-tasbih-tahmid-tahlil-and-takbir",
+    "nameArabic": "فضل التسبيح والتحميد ، والتهليل ، والتكبير",
+    "nameEnglish": "Excellence of Tasbih, Tahmid, Tahlil, and Takbir",
+    "nameUrdu": "تسبیح، تحمید، تہلیل اور تکبیر کی فضیلت",
+    "sortOrder": 130,
+    "totalDuas": 12
+  },
+  {
+    "id": 131,
+    "slug": "how-the-prophet-made-tasbeeh",
+    "nameArabic": "كيف كان النبي صلى الله عليه وسلم يسبح ؟",
+    "nameEnglish": "How the Prophet ﷺ made tasbeeh",
+    "nameUrdu": "نبی کریم ﷺ تسبیح کیسے شمار فرماتے تھے",
+    "sortOrder": 131,
+    "totalDuas": 1
+  },
+  {
+    "id": 132,
+    "slug": "comprehensive-types-of-good-and-manners",
+    "nameArabic": "من أنواع الخير والآداب الجامعة",
+    "nameEnglish": "Comprehensive types of good and manners",
+    "nameUrdu": "جامع خیر اور نبوی آداب",
+    "sortOrder": 132,
+    "totalDuas": 1
+  }
+]

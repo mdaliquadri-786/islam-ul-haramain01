@@ -1,0 +1,18 @@
+{
+  "name": "@islamic/islamic-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deterministic computational engine for prayer times, Qibla, Hijri calendar, and text normalization",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/**/*.test.ts",
+    "lint": "echo \"@islamic/islamic-engine lint placeholder\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}

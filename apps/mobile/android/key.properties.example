@@ -1,0 +1,11 @@
+# ==============================================================================
+# ANDROID RELEASE SIGNING PROPERTIES TEMPLATE
+# Copy to apps/mobile/android/key.properties
+# NEVER commit key.properties or .jks/.keystore files to version control!
+# (Already protected in .gitignore)
+# ==============================================================================
+
+keyAlias=upload
+keyPassword=<YOUR_KEY_PASSWORD>
+storeFile=../upload-keystore.jks
+storePassword=<YOUR_KEYSTORE_PASSWORD>

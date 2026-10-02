@@ -1,0 +1,218 @@
+name: CI/CD Pipeline & Release Verification
+
+on:
+  push:
+    branches: [ main, staging ]
+  pull_request:
+    branches: [ main, staging ]
+
+permissions:
+  contents: read
+
+jobs:
+  # ----------------------------------------------------------------------------
+  # JOB 1: Repository Integrity, Security Scan & Protected Hashes
+  # ----------------------------------------------------------------------------
+  integrity-and-security:
+    name: Integrity, Hashes & Secret Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '10.5.2'
+          run_install: false
+
+      - name: Verify Protected Religious Hashes & Migrations
+        run: node scripts/verify-release-integrity.mjs
+
+      - name: Verify Seed Translations SQL Completeness
+        run: node scripts/verify-seed-sql.mjs
+
+      - name: Secret Leak Prevention Scan
+        run: |
+          echo "Scanning for accidental hardcoded secrets, private keys, and service tokens..."
+          # Reject committed private keys
+          if grep -rn --exclude-dir={node_modules,.git,.next,dist,build} "BEGIN RSA PRIVATE KEY" .; then
+            echo "Error: Private key found!" && exit 1
+          fi
+          # Reject committed live secret tokens
+          if grep -rn --exclude-dir={node_modules,.git,.next,dist,build,scratch} "sk_live_" .; then
+            echo "Error: Live API token found!" && exit 1
+          fi
+          echo "Secret scan passed with 0 leaks."
+
+  # ----------------------------------------------------------------------------
+  # JOB 2: Monorepo TypeScript & Web Production Gate
+  # ----------------------------------------------------------------------------
+  web-and-engine:
+    name: Web & Islamic Engine Quality Gate
+    needs: integrity-and-security
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: '10.5.2'
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install Monorepo Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck Workspace Packages
+        run: pnpm typecheck
+
+      - name: Run Islamic Engine Test Suite (228 tests)
+        run: pnpm --filter ./packages/islamic-engine test
+
+      - name: Run Web Application Test Suite (144 tests)
+        run: pnpm --filter ./apps/web test
+
+      - name: Compile Next.js Production Build (603 pages)
+        run: pnpm --filter ./apps/web build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: "https://mock-staging.supabase.co"
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: "mock-staging-anon-key"
+
+  # ----------------------------------------------------------------------------
+  # JOB 3: Mobile Flutter Analysis & Test Suite
+  # ----------------------------------------------------------------------------
+  mobile-quality-gate:
+    name: Flutter Mobile Quality Gate
+    needs: integrity-and-security
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.5'
+          channel: 'stable'
+          cache: true
+
+      - name: Flutter Static Analysis
+        working-directory: apps/mobile
+        run: flutter analyze
+
+      - name: Run Flutter Test Suite (192 tests)
+        working-directory: apps/mobile
+        run: flutter test
+
+      - name: Verify Android Debug Compilation
+        working-directory: apps/mobile
+        run: flutter build apk --debug
+
+  # ----------------------------------------------------------------------------
+  # JOB 4: Mobile Release Packaging (Protected CI Secrets Gate)
+  # ----------------------------------------------------------------------------
+  mobile-release-packaging:
+    name: Mobile Release Compilation & Packaging
+    needs: [web-and-engine, mobile-quality-gate]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.5'
+          channel: 'stable'
+
+      - name: Configure Android Signing Credentials (If Vault Secrets Provided)
+        working-directory: apps/mobile/android
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "Decoding release upload keystore from protected CI secrets..."
+            echo "$KEYSTORE_BASE64" | base64 -d > release-keystore.jks
+            cat <<EOF > key.properties
+          keyAlias=$KEY_ALIAS
+          keyPassword=$KEY_PASSWORD
+          storeFile=../release-keystore.jks
+          storePassword=$KEYSTORE_PASSWORD
+          EOF
+            echo "Release signing configuration successfully assembled."
+          else
+            echo "Notice: Protected keystore secrets not configured. Build will fall back to debug signing for validation."
+          fi
+
+      - name: Compile Release APK
+        working-directory: apps/mobile
+        run: flutter build apk --release
+
+      - name: Compile Release App Bundle (AAB)
+        working-directory: apps/mobile
+        run: flutter build appbundle --release
+
+      - name: Archive Android Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-release-artifacts
+          path: |
+            apps/mobile/build/app/outputs/flutter-apk/*.apk
+            apps/mobile/build/app/outputs/bundle/release/*.aab
+          retention-days: 7
+
+  # ----------------------------------------------------------------------------
+  # JOB 5: Pre-Production Deployment Gate (Audit & Staging Sign-Off)
+  # ----------------------------------------------------------------------------
+  staging-deployment-gate:
+    name: Staging Deployment Gate & Health Sign-off
+    needs: [web-and-engine, mobile-quality-gate]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment Gate Verification
+        run: |
+          echo "============================================================"
+          echo "All automated quality, security, and build gates have passed."
+          echo "Staging deployment requires live Supabase staging credentials."
+          echo "Production deployment requires manual human architectural sign-off."
+          echo "============================================================"

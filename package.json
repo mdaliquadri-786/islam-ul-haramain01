@@ -1,0 +1,20 @@
+{
+  "name": "islamic-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Production-grade Sunni Islamic digital platform monorepo",
+  "scripts": {
+    "build": "pnpm --filter \"./packages/*\" --filter \"./apps/*\" run build",
+    "typecheck": "pnpm --filter \"./packages/*\" --filter \"./apps/*\" run typecheck",
+    "test": "pnpm --filter \"./packages/*\" --filter \"./apps/*\" run test",
+    "lint": "pnpm --filter \"./packages/*\" --filter \"./apps/*\" run lint"
+  },
+  "packageManager": "pnpm@10.5.2",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15",
+    "typescript": "^5.8.2"
+  }
+}

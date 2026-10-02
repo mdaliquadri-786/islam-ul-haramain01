@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.turbo
+dist
+build
+.dart_tool
+coverage
+.env*.local
+*.keystore
+*.jks
+key.properties
