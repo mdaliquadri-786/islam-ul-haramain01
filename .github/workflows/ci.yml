@@ -39,17 +39,40 @@ jobs:
 
       - name: Secret Leak Prevention Scan
         run: |
-          echo "Scanning for accidental hardcoded secrets, private keys, and service tokens..."
-          # Reject committed private keys
-          if grep -rn --exclude-dir={node_modules,.git,.next,dist,build} "BEGIN RSA PRIVATE KEY" .; then
-            echo "Error: Private key found!" && exit 1
-          fi
-          # Reject committed live secret tokens
-          if grep -rn --exclude-dir={node_modules,.git,.next,dist,build,scratch} "sk_live_" .; then
-            echo "Error: Live API token found!" && exit 1
-          fi
-          echo "Secret scan passed with 0 leaks."
+                  echo "Scanning for accidental hardcoded secrets, private keys, and service tokens..."
 
+          # Scan tracked project files only.
+          # Exclude CI workflow/documentation files because they intentionally contain
+          # the detection patterns themselves and would otherwise create false positives.
+          SCAN_EXCLUDES=(
+            --exclude-dir=node_modules
+            --exclude-dir=.git
+            --exclude-dir=.next
+            --exclude-dir=dist
+            --exclude-dir=build
+            --exclude-dir=scratch
+            --exclude-dir=.github
+            --exclude-dir=docs
+          )
+
+          # Reject committed private keys.
+          if grep -rn "${SCAN_EXCLUDES[@]}" "BEGIN RSA PRIVATE KEY" .; then
+            echo "Error: Private key found!"
+            exit 1
+          fi
+
+          if grep -rn "${SCAN_EXCLUDES[@]}" "BEGIN PRIVATE KEY" .; then
+            echo "Error: Private key found!"
+            exit 1
+          fi
+
+          # Reject committed live secret tokens.
+          if grep -rn "${SCAN_EXCLUDES[@]}" "sk_live_" .; then
+            echo "Error: Live API token found!"
+            exit 1
+          fi
+
+          echo "Secret scan passed with 0 leaks."
   # ----------------------------------------------------------------------------
   # JOB 2: Monorepo TypeScript & Web Production Gate
   # ----------------------------------------------------------------------------

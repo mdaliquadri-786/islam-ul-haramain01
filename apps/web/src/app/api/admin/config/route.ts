@@ -14,12 +14,16 @@ import { enforceRateLimit } from '@/lib/rate-limit';
 
 const ALLOWED_SETTING_KEYS = new Set([
   'maintenanceMode',
+  'maintenanceMessage',
   'registrationEnabled',
   'publishingEnabled',
   'subscriptionsEnabled',
   'minSupportedMobileVersion',
   'minSupportedWebVersion',
   'announcementBanner',
+  'announcementBannerEnabled',
+  'announcementBannerText',
+  'defaultLocale',
 ]);
 
 export async function GET(request: NextRequest) {
