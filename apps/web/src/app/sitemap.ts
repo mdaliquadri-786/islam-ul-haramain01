@@ -2,7 +2,7 @@
  * @file sitemap.ts
  * @package @islamic/web
  * @description Dynamic XML sitemap generator for Next.js App Router.
- * Milestone: M4.4 — SEO & OpenGraph Schema
+ * Milestone: M4.4 & Production Launch Optimization
  *
  * CRITICAL SAFETY & INDEXING RULES:
  * - Includes ONLY public, published, verified content across the 3 supported locales (en, ar, ur).
@@ -42,7 +42,7 @@ const CANONICAL_TAFSIR_AYAH_BENCHMARKS = [
   // Al-Falaq 113:1
   { surahId: 113, ayahId: 1 },
   // An-Nas 114:1
-  { surahId: 114, ayahId: 1 }
+  { surahId: 114, ayahId: 1 },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -66,8 +66,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency: options.changeFrequency,
         priority: options.priority,
         alternates: {
-          languages: alternatesLanguages
-        }
+          languages: alternatesLanguages,
+        },
       });
     }
   };
@@ -75,21 +75,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 1. Home Pages (Priority: 1.0)
   addLocalizedRoutes('', {
     priority: 1.0,
-    changeFrequency: 'daily'
+    changeFrequency: 'daily',
   });
 
   // 2. Quran Section
   // 2a. Quran Landing (Priority: 0.9)
   addLocalizedRoutes('/quran', {
     priority: 0.9,
-    changeFrequency: 'weekly'
+    changeFrequency: 'weekly',
   });
 
   // 2b. All 114 Surahs (Priority: 0.85)
   for (let s = 1; s <= 114; s++) {
     addLocalizedRoutes(`/quran/${s}`, {
       priority: 0.85,
-      changeFrequency: 'monthly'
+      changeFrequency: 'monthly',
     });
   }
 
@@ -97,53 +97,65 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 3a. Hadith Landing (Priority: 0.9)
   addLocalizedRoutes('/hadith', {
     priority: 0.9,
-    changeFrequency: 'weekly'
+    changeFrequency: 'weekly',
   });
 
   // 3b. Kutub al-Sittah Collections (Priority: 0.85)
   for (const col of CANONICAL_HADITH_COLLECTIONS) {
     addLocalizedRoutes(`/hadith/${col.id}`, {
       priority: 0.85,
-      changeFrequency: 'monthly'
+      changeFrequency: 'monthly',
     });
   }
 
-  // 4. Duas & Adhkar Section
-  // 4a. Duas Landing (Priority: 0.9)
-  addLocalizedRoutes('/duas', {
+  // 4. Seerah Section (Priority: 0.9)
+  addLocalizedRoutes('/seerah', {
     priority: 0.9,
-    changeFrequency: 'weekly'
+    changeFrequency: 'weekly',
   });
 
-  // 4b. All Hisn al-Muslim Categories (Priority: 0.8)
+  // 5. Tasawwuf & Tazkiyah Section (Priority: 0.9)
+  addLocalizedRoutes('/tasawwuf', {
+    priority: 0.9,
+    changeFrequency: 'weekly',
+  });
+
+  // 6. Duas & Adhkar Section
+  // 6a. Duas Landing (Priority: 0.9)
+  addLocalizedRoutes('/duas', {
+    priority: 0.9,
+    changeFrequency: 'weekly',
+  });
+
+  // 6b. All Hisn al-Muslim Categories (Priority: 0.8)
   try {
     const duaCategories = getAllDuaCategories();
     for (const cat of duaCategories) {
       if (cat.slug) {
         addLocalizedRoutes(`/duas/${cat.slug}`, {
           priority: 0.8,
-          changeFrequency: 'monthly'
+          changeFrequency: 'monthly',
         });
       }
     }
-  } catch (err) {
+  } catch {
     // Non-blocking fallback if corpus not yet loaded
   }
 
-  // 5. Prayer Times & Qibla (Priority: 0.85)
+  // 7. Prayer Times & Qibla (Priority: 0.85)
   addLocalizedRoutes('/prayer-times', {
     priority: 0.85,
-    changeFrequency: 'daily'
+    changeFrequency: 'daily',
   });
 
-  // 6. Articles Section
-  // 6a. Articles Index (Priority: 0.85)
+  // 8. Articles Section
+  // 8a. Articles Index (Priority: 0.85)
   addLocalizedRoutes('/articles', {
     priority: 0.85,
-    changeFrequency: 'daily'
+    changeFrequency: 'daily',
   });
 
-  // 6b. Published Articles Only (Priority: 0.8)
+  // 8b. Published Articles Only (Priority: 0.8)
   try {
     const articleService = await getArticleService();
     const result = await articleService.listPublicArticles({ limit: 100 });
@@ -160,34 +172,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         addLocalizedRoutes(`/articles/${item.slug}`, {
           priority: 0.8,
           changeFrequency: 'weekly',
-          lastModified: lastMod
+          lastModified: lastMod,
         });
       }
     }
-  } catch (err) {
+  } catch {
     // Non-blocking fallback
   }
 
-  // 7. Books Section
-  // 7a. Books Catalog Index (Priority: 0.85)
+  // 9. Books Section
+  // 9a. Books Catalog Index (Priority: 0.85)
   addLocalizedRoutes('/books', {
     priority: 0.85,
-    changeFrequency: 'weekly'
+    changeFrequency: 'weekly',
   });
 
-  // 7b. Canonical Classical Books Overviews (Priority: 0.8)
+  // 9b. Canonical Classical Books Overviews (Priority: 0.8)
   for (const book of CANONICAL_BOOKS) {
     addLocalizedRoutes(`/books/${book.slug}`, {
       priority: 0.8,
-      changeFrequency: 'monthly'
+      changeFrequency: 'monthly',
     });
   }
 
-  // 8. Classical Tafsir Benchmark Entries (Priority: 0.75)
+  // 10. Classical Tafsir Benchmark Entries (Priority: 0.75)
   for (const benchmark of CANONICAL_TAFSIR_AYAH_BENCHMARKS) {
     addLocalizedRoutes(`/tafsir/${benchmark.surahId}/${benchmark.ayahId}`, {
       priority: 0.75,
-      changeFrequency: 'monthly'
+      changeFrequency: 'monthly',
     });
   }
 

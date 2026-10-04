@@ -1,0 +1,21 @@
+# Search Engine Crawler Policy for ISLAM UL HARAMAIN
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /api/
+Disallow: /api/admin
+Disallow: /api/admin/*
+Disallow: /cms
+Disallow: /cms/*
+Disallow: /*/admin
+Disallow: /*/admin/*
+Disallow: /*/cms
+Disallow: /*/cms/*
+Disallow: /*/library
+Disallow: /*/library/*
+Disallow: /*/profile
+Disallow: /*/profile/*
+Disallow: /*/search
+
+Sitemap: https://islamulharamain.com/sitemap.xml

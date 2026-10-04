@@ -63,7 +63,7 @@ export default async function PublicLayout({
           >
             {/* Brand Logo & Calligraphic Seal */}
             <Link
-              href={`/${currentLocale}`}
+              href={`/${currentLocale}` as any}
               style={{
                 textDecoration: 'none',
                 display: 'flex',
@@ -110,7 +110,7 @@ export default async function PublicLayout({
               {navLinks.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={item.href as any}
                   style={{
                     padding: '0.4rem 0.75rem',
                     borderRadius: '0.5rem',
@@ -209,19 +209,19 @@ export default async function PublicLayout({
                 <div>
                   <div style={{ fontWeight: 700, color: '#ffffff', marginBottom: '0.5rem' }}>Sciences</div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
-                    <Link href={`/${currentLocale}/quran`} style={{ color: '#94a3b8', textDecoration: 'none' }}>Medina Mushaf</Link>
-                    <Link href={`/${currentLocale}/hadith`} style={{ color: '#94a3b8', textDecoration: 'none' }}>Kutub al-Sittah</Link>
-                    <Link href={`/${currentLocale}/seerah`} style={{ color: '#94a3b8', textDecoration: 'none' }}>Prophetic Biography</Link>
-                    <Link href={`/${currentLocale}/tasawwuf`} style={{ color: '#94a3b8', textDecoration: 'none' }}>Spiritual Purification</Link>
+                    <Link href={`/${currentLocale}/quran` as any} style={{ color: '#94a3b8', textDecoration: 'none' }}>Medina Mushaf</Link>
+                    <Link href={`/${currentLocale}/hadith` as any} style={{ color: '#94a3b8', textDecoration: 'none' }}>Kutub al-Sittah</Link>
+                    <Link href={`/${currentLocale}/seerah` as any} style={{ color: '#94a3b8', textDecoration: 'none' }}>Prophetic Biography</Link>
+                    <Link href={`/${currentLocale}/tasawwuf` as any} style={{ color: '#94a3b8', textDecoration: 'none' }}>Spiritual Purification</Link>
                   </div>
                 </div>
 
                 <div>
                   <div style={{ fontWeight: 700, color: '#ffffff', marginBottom: '0.5rem' }}>Devotional</div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
-                    <Link href={`/${currentLocale}/prayer-times`} style={{ color: '#94a3b8', textDecoration: 'none' }}>Prayer Times & Qibla</Link>
-                    <Link href={`/${currentLocale}/duas`} style={{ color: '#94a3b8', textDecoration: 'none' }}>Hisn al-Muslim Adhkar</Link>
-                    <Link href={`/${currentLocale}/library`} style={{ color: '#94a3b8', textDecoration: 'none' }}>Personal Bookmarks</Link>
+                    <Link href={`/${currentLocale}/prayer-times` as any} style={{ color: '#94a3b8', textDecoration: 'none' }}>Prayer Times & Qibla</Link>
+                    <Link href={`/${currentLocale}/duas` as any} style={{ color: '#94a3b8', textDecoration: 'none' }}>Hisn al-Muslim Adhkar</Link>
+                    <Link href={`/${currentLocale}/library` as any} style={{ color: '#94a3b8', textDecoration: 'none' }}>Personal Bookmarks</Link>
                   </div>
                 </div>
               </div>

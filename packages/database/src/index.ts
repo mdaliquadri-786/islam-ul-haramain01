@@ -25,6 +25,7 @@ export * from './tafsir/tafsir-service';
 export * from './books/books-service';
 export * from './admin/admin-service';
 export * from './observability';
+export * from './config/production-env';
 
 export const DATABASE_PACKAGE_VERSION = '0.15.0-admin-system';
 
