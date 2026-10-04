@@ -47,7 +47,14 @@ let dbInitPromise: Promise<IDBDatabase> | null = null;
  * Initializes and upgrades the IndexedDB instance for offline scripture storage.
  */
 export async function initOfflineDB(): Promise<IDBDatabase> {
-  if (typeof window === 'undefined') {
+  const idb =
+    typeof window !== 'undefined'
+      ? window.indexedDB
+    : typeof self !== 'undefined'
+      ? self.indexedDB
+      : null;
+
+  if (!idb) {
     throw new Error('IndexedDB is not available in non-browser environments.');
   }
 
@@ -60,7 +67,7 @@ export async function initOfflineDB(): Promise<IDBDatabase> {
   }
 
   dbInitPromise = new Promise((resolve, reject) => {
-    const request = window.indexedDB.open(DB_NAME, DB_VERSION);
+    const request = idb.open(DB_NAME, DB_VERSION);
 
     request.onupgradeneeded = (event) => {
       const db = (event.target as IDBOpenDBRequest).result;

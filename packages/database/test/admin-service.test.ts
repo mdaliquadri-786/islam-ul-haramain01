@@ -271,10 +271,15 @@ describe('Milestone M4.5 — Centralized Admin Service & Operational Control', (
     });
 
     it('cannot demote the platform root super_admin', async () => {
+      const secondSuperAdmin: AdminActor = {
+        id: '00000000-0000-0000-0001-000000000099',
+        name: 'Second SuperAdmin',
+        roles: ['super_admin'],
+      };
       await assert.rejects(
         async () => {
           await service.updateUserRole(
-            superAdminActor,
+            secondSuperAdmin,
             '00000000-0000-0000-0001-000000000000',
             'user'
           );
