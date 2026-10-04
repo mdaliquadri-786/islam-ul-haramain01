@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   transpilePackages: ['@islamic/database', '@islamic/islamic-engine', '@islamic/ui'],
 
   experimental: {
-    typedRoutes: true,
     optimizePackageImports: [
       '@islamic/ui',
       '@islamic/islamic-engine',
